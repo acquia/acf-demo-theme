@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ */
+#}
+
+{% set themePath = '/' ~ directory %}
+
+{% set body_classes = body_classes ?? [
+  'global',
+  logged_in ? 'user-logged-in',
+  not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+  node_type ? 'page-node-type-' ~ node_type|clean_class,
+  db_offline ? 'db-offline',
+] %}
+
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+<head>
+  <title>{{ head_title|safe_join(' | ') }}</title>
+
+  <head-placeholder token="{{ placeholder_token|raw }}">
+  <css-placeholder token="{{ placeholder_token|raw }}">
+  <js-placeholder token="{{ placeholder_token|raw }}">
+</head>
+
+<body{{ attributes.addClass(body_classes) }}>
+{#
+  Keyboard navigation/accessibility link to main content section in
+  page.html.twig.
+#}
+<a href="#main-content" class="visually-hidden focusable skip-link">
+  {{ 'Skip to main content'|t }}
+</a>
+
+{% if page_top %}
+  {{ page_top }}
+{% endif %}
+
+{% if page %}
+  {{ page }}
+{% endif %}
+
+{% if page_bottom %}
+  {{ page_bottom }}
+{% endif %}
+
+<js-bottom-placeholder token="{{ placeholder_token|raw }}">
+</body>
+</html>

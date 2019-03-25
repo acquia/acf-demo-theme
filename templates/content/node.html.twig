@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ */
+#}
+
+{%
+  set classes = classes ?? [
+    'post',
+    'post--' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'post--promoted',
+    node.isSticky() ? 'post--sticky',
+    not node.isPublished() ? 'post--unpublished',
+    view_mode ? 'post--' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="post__inner">
+    <header class="post__header">
+      {{ title_prefix }}
+      {% if not page %}
+        <h1{{ title_attributes.addClass('post__title') }}>
+          {{ label }}
+        </h1>
+      {% endif %}
+      {{ title_suffix }}
+    </header>
+
+    <div{{ content_attributes.addClass(['post__body', 'text']) }}>
+      {{ content }}
+    </div>
+  </div>
+</article>

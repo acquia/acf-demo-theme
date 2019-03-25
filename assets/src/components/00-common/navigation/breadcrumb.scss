@@ -1,0 +1,28 @@
+.breadcrumb {
+  margin-top: $small-spacing;
+
+  @include mappy-bp(medium) {
+    margin-top: $base-spacing;
+  }
+}
+
+.breadcrumb__list {
+  @extend %inline-list;
+}
+
+.breadcrumb__list-item {
+  @extend %separator--right;
+}
+
+.breadcrumb__link {
+  color: $breadcrumb-color;
+
+  &:hover {
+    color: $breadcrumb-color-hover;
+  }
+}
+
+.breadcrumb__text {
+  color: $breadcrumb-color-active;
+}
+

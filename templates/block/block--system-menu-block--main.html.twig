@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ */
+#}
+
+<div{{ attributes.addClass('site-navigation js-dropdown') }}>
+  <a class="site-navigation__icon site-icon js-dropdown-button"
+     href="javascript:;" role="button" aria-haspopup="true">
+    <span class="visually-hidden">{{ 'Menu'|t }}</span>
+  </a>
+
+  <nav class="site-navigation__dropdown js-site-navigation" role="navigation"
+       aria-hidden="true">
+    {{ content }}
+  </nav>
+</div>

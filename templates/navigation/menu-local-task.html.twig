@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ */
+#}
+
+{% set classes = [
+  is_active ? 'is-active'
+] %}
+
+<li{{ attributes.addClass(classes) }}>{{ link }}</li>

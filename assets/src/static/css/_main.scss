@@ -1,0 +1,45 @@
+// Base
+//
+// This file loads all files.
+//
+// Style guide: Base
+
+@charset "UTF-8";
+
+// Required imports.
+@import "normalize.css";
+@import "mappy-breakpoints";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "extends";
+
+
+// Import commons.
+@import "../../components/00-common/base/lists";
+@import "../../components/00-common/base/forms";
+@import "../../components/00-common/base/tables";
+@import "../../components/00-common/base/typography";
+@import "../../components/00-common/buttons/buttons";
+@import "../../components/00-common/flex/flex";
+@import "../../components/00-common/icons/icons";
+@import "../../components/00-common/layout/footer";
+@import "../../components/00-common/layout/global";
+@import "../../components/00-common/layout/header";
+@import "../../components/00-common/layout/layout";
+@import "../../components/00-common/layout/user-form";
+@import "../../components/00-common/navigation/breadcrumb";
+@import "../../components/00-common/navigation/menu";
+@import "../../components/00-common/navigation/pager";
+
+// Import components.
+@import "../../components/02-component/acf-blocks/acf-blocks";
+@import "../../components/02-component/grid/grid";
+@import "../../components/02-component/media/responsive-media";
+@import "../../components/02-component/messages/messages";
+@import "../../components/02-component/product-card/product-card";
+@import "../../components/02-component/product-full/product-full";
+
+// Import pages.
+@import "../../components/04-pages/pages";
+@import "../../components/04-pages/search";

@@ -1,0 +1,130 @@
+// ============================
+.region--brand {
+  margin-right: $base-spacing;
+}
+
+.region--header {
+  @include flex-row;
+  flex-grow: 1;
+
+  .region__inner {
+    @include flex-row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+// ============================
+.menu {
+  position: relative;
+}
+
+.menu--main,
+.menu--account {
+  flex-wrap: wrap;
+
+  > li {
+    @include mappy-bp(max-width small) {
+      @include flex-width();
+    }
+  }
+}
+
+.menu--main {
+  > li {
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
+  }
+}
+
+// Sub-menu.
+.menu--level-2,
+.menu--level-3 {
+  flex-wrap: wrap;
+
+  li {
+    @include flex-width();
+    white-space: nowrap;
+  }
+}
+
+.menu--level-2 {
+  @include mappy-bp(small) {
+    @include dropdown;
+    padding-left: ($small-spacing / 2);
+    padding-right: ($small-spacing / 2);
+  }
+}
+
+.menu--level-3 {
+  > li {
+    padding-left: $small-spacing;
+  }
+}
+
+.menu__link {
+  @include base-bold;
+  @include link-inverse;
+  text-transform: uppercase;
+}
+
+// ============================
+.site-branding {
+  padding: $small-spacing 0;
+
+  @include mappy-bp(small) {
+    padding: $base-spacing 0;
+  }
+}
+
+.site-branding__logo {
+  display: block;
+  width: 8rem;
+  height: 2rem;
+  margin-right: auto;
+}
+
+// ============================
+.site-icon {
+  display: block;
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-size: contain;
+  z-index: 1;
+}
+
+// ============================
+.site-navigation {
+  position: relative;
+  order: 1;
+
+  @include mappy-bp(small) {
+    order: 0;
+    margin: 0 auto;
+    padding: 0 $base-spacing;
+  }
+}
+
+.site-navigation__icon {
+  background: url(#{$svg_src}/icon__menu.svg) no-repeat;
+  background-size: contain;
+  margin-left: $small-spacing;
+
+  @include mappy-bp(small) {
+    display: none;
+  }
+}
+
+.site-navigation__dropdown {
+  @include mappy-bp(max-width small) {
+    @include dropdown;
+    right: 0;
+  }
+}
+
+// ============================
+.toolbar .toolbar-bar .toolbar-tab {
+  position: static; // Fix admin toolbar.
+}

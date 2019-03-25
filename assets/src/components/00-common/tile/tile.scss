@@ -1,0 +1,26 @@
+// Tile
+
+.tile {
+  background-color: $medium-gray;
+  overflow: hidden;
+
+  &,
+  &--1-1 {
+    @include responsive-ratio(1, 1);
+  }
+
+  &--1-2 {
+    @include responsive-ratio(1, 2);
+  }
+}
+
+.tile__content {
+  @extend %absolute-cover;
+  top: auto;
+  padding: $small-spacing;
+  color: $white;
+}
+
+.tile__image {
+  // code goes here
+}

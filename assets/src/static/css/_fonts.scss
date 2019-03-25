@@ -1,0 +1,43 @@
+// Fonts
+
+@mixin base-light {
+  font-family: $font-base;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin base-light-italic {
+  font-family: $font-base;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin base-regular {
+  font-family: $font-base;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin base-regular-italic {
+  font-family: $font-base;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin base-bold {
+  font-family: $font-base;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin heading-regular {
+  font-family: $font-primary-regular;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin heading-bold {
+  font-family: $font-primary-regular;
+  font-weight: 700;
+  font-style: normal;
+}

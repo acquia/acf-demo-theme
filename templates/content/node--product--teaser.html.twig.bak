@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ */
+#}
+
+{% set classes = classes ?? [
+  'product-card',
+  not node.isPublished() ? 'product-card--unpublished',
+] %}
+
+<a{{ attributes.addClass(classes) }} href={{ url }}>
+  <div class="product-card__image">
+    {{ content.field_product_images }}
+  </div>
+
+  <div class="product-card__content">
+    <div class="product-card__header">
+      <div class="product-card__title">
+        {{ label }}
+      </div>
+    </div>
+
+    <div class="product-card__price">
+      {{ content.field_product_price }}
+    </div>
+  </div>
+</a>

@@ -1,0 +1,71 @@
+// Product card
+
+.product-full {
+  padding: $large-spacing 0;
+  position: relative;
+}
+
+.product-full__inner {
+  @extend %flex-row;
+  flex-wrap: wrap;
+}
+
+.product-full__media {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: $base-spacing;
+
+  @include mappy-bp(small) {
+    @include flex-width(30%);
+  }
+}
+
+.product-full__content {
+  width: 100%;
+
+  @include mappy-bp(small) {
+    @include flex-width(70%);
+    padding-left: $large-spacing;
+  }
+}
+
+.product-full__header {
+  margin-bottom: $base-spacing;
+}
+
+.product-full__title {
+  font-size: 3rem;
+  line-height: 1.2;
+
+  @include mappy-bp(small) {
+    font-size: 4.4rem;
+  }
+}
+
+.product-full__sku {
+  margin-top: $small-spacing;
+  color: $medium-gray;
+  font-size: 1rem;
+}
+
+.product-full__price {
+  @include heading-bold;
+  margin-bottom: $base-spacing;
+  font-size: 2.4rem;
+
+  @include mappy-bp(small) {
+    font-size: 3.6rem;
+  }
+}
+
+.product-full__variants {
+  margin-bottom: $large-spacing;
+}
+
+
+.product-full__block-label {
+  @include heading-bold;
+  margin-bottom: $small-spacing;
+  font-size: 1.6rem;
+}

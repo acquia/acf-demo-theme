@@ -1,0 +1,22 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      assets/public/css/styles.css: { }
+
+global-scripts:
+  version: VERSION
+  js:
+    assets/public/js/lib/modernizr.min.js: { minified: true }
+    assets/public/js/lib/ofi.min.js: { minified: true }
+    assets/public/js/scripts.js: { }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+
+fonts:
+  version: VERSION
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Montserrat:400,700': { type: external }

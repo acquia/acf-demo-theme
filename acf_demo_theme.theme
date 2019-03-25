@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ACM theme.
+ */
+
+//kint_require();
+//Kint::$maxLevels = 6;
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function acf_demo_theme_page_attachments_alter(&$page) {
+  // Force IE to use Chrome Frame if installed.
+  $chrome_frame = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+      'http-equiv' => 'X-UA-Compatible',
+      'content' => 'IE=edge, Chrome=1',
+    ],
+  ];
+  $page['#attached']['html_head'][] = [$chrome_frame, 'chrome_frame'];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function acf_demo_theme_form_alter(&$form, &$form_state, $form_id = NULL) {
+  // Mark the submit action as the primary action, when it appears.
+  if(empty($form['actions']['submit']['#button_type'])) {
+    $form['actions']['submit']['#button_type'] = 'primary';
+  }
+
+  if(isset($form['basic'])) {
+    unset(
+      $form['basic']['#attributes']['class'],
+      $form['help_link']
+    );
+
+    // Mark the submit action as the primary action, when it appears.
+    if(empty($form['basic']['submit']['#button_type'])) {
+      $form['basic']['submit']['#button_type'] = 'primary';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function acf_demo_theme_preprocess_field(&$variables, $hook) {
+  // Make additional variables available to the template.
+  $variables['bundle'] = $variables['element']['#bundle'];
+}

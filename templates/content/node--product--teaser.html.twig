@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ */
+#}
+
+{% set classes = classes ?? [
+  'product-card',
+  not node.isPublished() ? 'product-card--unpublished',
+] %}
+
+<a{{ attributes.addClass(classes) }} href={{ url }}>
+  <div class="product-full__inner teaser">
+    <div class="product-full__media">
+      {{ content.field_product_images }}
+    </div>
+    <div class="product-full__content">
+      <header class="product-full__header">
+        {{ title_prefix }}
+        <h1{{ title_attributes.addClass('product-full__title') }}>
+          {{ label }}
+        </h1>
+        {{ title_suffix }}
+
+        <div class="product-full__sku">{{ content.field_product_sku }}</div>
+      </header>
+
+      <div class="product-full__price">
+        {{ content.field_product_price }}
+      </div>
+    </div>
+  </div>
+</a>

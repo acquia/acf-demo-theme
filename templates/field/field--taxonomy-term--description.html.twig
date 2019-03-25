@@ -1,0 +1,9 @@
+{#
+/**
+ * @file
+ */
+#}
+
+{% for item in items %}
+  <div{{ attributes.addClass('page-description') }}>{{ item.content }}</div>
+{% endfor %}

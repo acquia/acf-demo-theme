@@ -1,0 +1,31 @@
+// Product card
+
+.product-card {
+  @extend %flex-column;
+  @include link-inverse;
+  position: relative;
+}
+
+.product-card__image {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.product-card__content {
+  @extend %flex-column;
+  padding: $small-spacing 0;
+}
+
+.product-card__header {
+  margin-bottom: $small-spacing;
+}
+
+.product-card__title {
+  @include heading-regular;
+  font-size: 1.6rem;
+}
+
+.product-card__price {
+  @include heading-bold;
+  font-size: 2rem;
+}

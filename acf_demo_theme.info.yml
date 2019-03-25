@@ -1,0 +1,20 @@
+name: ACF Demo Theme
+type: theme
+description: Very simple theme for the ACF demo.
+base theme: stable
+core: 8.x
+
+libraries:
+  - acf_demo_theme/global-styling
+  - acf_demo_theme/global-scripts
+  - acf_demo_theme/fonts
+
+regions:
+  brand: Brand
+  header: Header
+  content: Content
+  footer: Footer
+
+regions_hidden:
+  - sidebar_first
+  - sidebar_second
