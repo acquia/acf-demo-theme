@@ -30,7 +30,7 @@
     "mappy-breakpoints": "^0.2.3",
     "normalize.css": "^8.0.1",
     "sass-module-importer": "^1.4.0"
-  }
+  },
   "maintainer": "Ron Northcutt",
   "contributors": [
     "Ron Northcutt", 
