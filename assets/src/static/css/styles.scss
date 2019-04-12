@@ -4,4 +4,7 @@
 $header-background: #ddd;
 $footer-background: #ddd;
 
+// Logo
+.block--system-branding-block svg, .block--system-branding-block img[src*="svg"] {fill: #018dc6;}
+
 @import "main";
