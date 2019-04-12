@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+body {
+  background-color: #fff;
+  color: #414141;
+}
+
+a,
+.menu__link:hover,
+.menu__link:focus {
+  color: #01a8e7;
+}
+
+a:hover {
+  color: #1dc0fe;
+}
+
+.global__header,
+.global__footer {
+  background-color: #dddddd;
+}
+
+.menu__link {
+  color: #414142;
+}
+
+.menu__link:hover {
+  color: #01a8e8;
+}
+
+.button--primary {
+  background-color: #01a8e7;
+}
+
+.button--primary:hover {
+  background-color: #0183b4;
+}
+
+.block--system-branding-block svg,
+.block--system-branding-block img[src*="svg"] {
+  fill: #018dc6;
+}
