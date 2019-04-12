@@ -54,6 +54,11 @@ $info = [
   'css' => [
     'assets/public/css/colors.css',
   ],
+  
+  // Files to copy.
+  'copy' => [
+    'logo.svg',
+  ],
 
   // Preview files.
   'preview_library' => 'acf_demo_theme/color.preview',
