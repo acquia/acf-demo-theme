@@ -6,13 +6,12 @@ The ACF project is a reference architecture similar to the `examples` module. It
 
 This code is provided as-is with no warranty or support. This is a community reference project! We hope this provides value to eeryone, but this is **not an official Acquia product**. Please feel free to share and contribute back.
 
-## Authors
+## Copyright and license
 
-* **Ron Northcutt** - [rlnorthcutt](https://github.com/brantwynn)
-* **Liliana Zbirciog** 
-* **Andrei Perciun** - [andreiperciun](https://github.com/andreiperciun)
-* **Alexei Seremet** - [alexeiseremet](https://github.com/alexeiseremet)
+Copyright © 2018 Acquia Inc.
 
-## License
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
