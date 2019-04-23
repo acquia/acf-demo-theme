@@ -8,7 +8,7 @@ This code is provided as-is with no warranty or support. This is a community ref
 
 ## Copyright and license
 
-Copyright © 2018 Acquia Inc.
+Copyright © 2019 Acquia Inc.
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
